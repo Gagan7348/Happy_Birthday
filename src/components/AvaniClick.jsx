@@ -1,5 +1,12 @@
 import React, { useState, useRef } from 'react'
 import './AvaniClick.css'
+import photo1 from '../assets/photo1.png'
+import photo2 from '../assets/photo2.png'
+import photo3 from '../assets/photo3.png'
+import photo4 from '../assets/photo4.png'
+import photo5 from '../assets/photo5.png'
+
+const photos = [photo1, photo2, photo3, photo4, photo5]
 
 const AvaniClick = ({ avani, onToggle }) => {
   const [isExploding, setIsExploding] = useState(false)
@@ -238,11 +245,8 @@ const AvaniClick = ({ avani, onToggle }) => {
             <div className="photo-display">
               <button className="gallery-nav prev" onClick={prevPhoto}>❮</button>
               <div className="photo-frame" onDoubleClick={handlePhotoDoubleClick}>
-                <div className="photo-placeholder">
-                  <span className="photo-number">Photo {currentPhotoIndex + 1}/5</span>
-                  <span className="photo-heart">❤️</span>
-                  <span className="double-click-hint">Double-click to open letter 💌</span>
-                </div>
+                <img src={photos[currentPhotoIndex]} alt={`Photo ${currentPhotoIndex + 1}`} className="gallery-photo" />
+                <span className="double-click-hint">Double-click to open letter 💌</span>
               </div>
               <button className="gallery-nav next" onClick={nextPhoto}>❯</button>
             </div>
