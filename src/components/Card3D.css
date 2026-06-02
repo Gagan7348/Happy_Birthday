@@ -1,0 +1,104 @@
+.card-3d-container {
+  perspective: 1000px;
+  display: inline-block;
+}
+
+.card-3d {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+}
+
+.card-3d.flipped {
+  transform: rotateY(180deg);
+}
+
+.card-3d-front,
+.card-3d-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.card-3d-front {
+  background: linear-gradient(135deg, #ff6b6b, #ff8787);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card-3d-back {
+  background: linear-gradient(135deg, #4ecdc4, #44a08d);
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card-3d:hover {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.card-3d-front h3,
+.card-3d-back h3 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.card-3d-front p,
+.card-3d-back p {
+  font-family: 'Sriracha', cursive;
+  font-size: 1.2rem;
+  color: white;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.card-hint {
+  position: absolute;
+  bottom: 15px;
+  font-family: 'Sriracha', cursive;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-3d {
+    width: 250px;
+    height: 350px;
+  }
+  
+  .card-3d-front h3,
+  .card-3d-back h3 {
+    font-size: 1.5rem;
+  }
+  
+  .card-3d-front p,
+  .card-3d-back p {
+    font-size: 1rem;
+  }
+}

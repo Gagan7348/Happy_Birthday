@@ -1,0 +1,182 @@
+.book-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.book {
+  display: flex;
+  gap: 20px;
+  max-width: 900px;
+  width: 100%;
+}
+
+.card {
+  flex: 1;
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card1 {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ff8787 100%);
+}
+
+.card2 {
+  background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
+}
+
+.card1-content,
+.card2-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card1-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5rem;
+  color: white;
+  text-align: center;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.card1-decoration {
+  position: relative;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card1-decoration-sparkle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  animation: sparkle 1.5s infinite;
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+}
+
+.deco-shape {
+  position: absolute;
+}
+
+.top-right-star {
+  top: 10px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+.bottom-left-ring {
+  bottom: 10px;
+  left: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+.card2-recipient {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  color: white;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.card2-message-text {
+  font-family: 'Sriracha', cursive;
+  font-size: 1rem;
+  color: white;
+  line-height: 1.6;
+}
+
+.card2-message-text article {
+  margin-bottom: 15px;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.card2-decoration {
+  height: 20px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  border-radius: 10px;
+}
+
+.corner-ribbon {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+}
+
+.top-left {
+  top: 0;
+  left: 0;
+}
+
+.bottom-right {
+  bottom: 0;
+  right: 0;
+}
+
+.confetti-dots {
+  position: relative;
+  height: 30px;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.5) 2px, transparent 2px);
+  background-size: 20px 20px;
+}
+
+.signature {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.5rem;
+  color: white;
+  text-align: right;
+  margin: 20px 0 0 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .book {
+    flex-direction: column;
+  }
+  
+  .card {
+    padding: 20px;
+  }
+  
+  .card1-title,
+  .card2-recipient {
+    font-size: 1.5rem;
+  }
+  
+  .card2-message-text {
+    font-size: 0.9rem;
+  }
+  
+  .signature {
+    font-size: 1.2rem;
+  }
+}
