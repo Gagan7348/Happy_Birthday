@@ -19,9 +19,7 @@ const App = () => {
         <Route path='test' element={<Test />}></Route>
       </Route>
     </Route>
-  ), {
-    basename: '/Happy_Birthday',
-  })
+  ))
 
 
   // ------------------Cake loader 
