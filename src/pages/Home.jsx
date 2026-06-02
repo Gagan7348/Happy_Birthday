@@ -13,6 +13,7 @@ import CountdownTimer from "../components/CountdownTimer";
 import GiftReveal from "../components/GiftReveal";
 import FloatingHearts from "../components/FloatingHearts";
 import GradientAnimation from "../components/GradientAnimation";
+import AvaniClick from "../components/AvaniClick";
 
 const Home = () => {
     // ------------------- Hooks 
@@ -122,7 +123,7 @@ const Home = () => {
                     <div className="right">
                         <div className="box__account">
                             <div className="image">
-                                <img src={avani} alt="" />
+                                <AvaniClick avani={avani} onToggle={() => SetActive(!Active)} />
                             </div>
                             <div className="name">
                                 <i className="fa-solid fa-heart"></i>
