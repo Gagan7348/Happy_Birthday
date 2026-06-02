@@ -20,7 +20,7 @@ const App = () => {
       </Route>
     </Route>
   ), {
-    basename: '/Happy_Birthday',
+    basename: '/Happy_Birthday/',
   })
 
 
