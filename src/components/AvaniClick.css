@@ -428,15 +428,23 @@
 }
 
 .gallery-close {
-  position: absolute;
-  top: 15px;
+  position: fixed;
+  top: 20px;
   right: 20px;
-  background: none;
+  background: linear-gradient(135deg, #ff6b9d, #c44569);
   border: none;
-  font-size: 28px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 24px;
   cursor: pointer;
-  color: #c44569;
-  transition: transform 0.3s ease;
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 105, 180, 0.4);
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .gallery-close:hover {
@@ -485,6 +493,24 @@
 .photo-heart {
   font-size: 48px;
   animation: heart-beat 1s ease-in-out infinite;
+}
+
+.double-click-hint {
+  display: block;
+  font-size: 14px;
+  color: #c44569;
+  margin-top: 15px;
+  font-weight: 500;
+  animation: pulse-text 2s ease-in-out infinite;
+}
+
+@keyframes pulse-text {
+  0%, 100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 
 .gallery-nav {

@@ -110,6 +110,29 @@
   font-size: 1rem;
   color: white;
   line-height: 1.6;
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.5) rgba(255, 255, 255, 0.1);
+}
+
+.card2-message-text::-webkit-scrollbar {
+  width: 8px;
+}
+
+.card2-message-text::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.card2-message-text::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+}
+
+.card2-message-text::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.7);
 }
 
 .card2-message-text article {

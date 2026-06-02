@@ -13,6 +13,7 @@ const AvaniClick = ({ avani, onToggle }) => {
   const containerRef = useRef(null)
 
   const handleClick = () => {
+    console.log('Avani image clicked!')
     setIsExploding(true)
     
     // Generate particles
@@ -104,6 +105,11 @@ const AvaniClick = ({ avani, onToggle }) => {
 
   const handleClosePhotoGallery = () => {
     setShowPhotoGallery(false)
+  }
+
+  const handlePhotoDoubleClick = () => {
+    setShowPhotoGallery(false)
+    onToggle()
   }
 
   const nextPhoto = () => {
@@ -231,10 +237,11 @@ const AvaniClick = ({ avani, onToggle }) => {
             <h3 className="gallery-title">💕 Our Memories 💕</h3>
             <div className="photo-display">
               <button className="gallery-nav prev" onClick={prevPhoto}>❮</button>
-              <div className="photo-frame">
+              <div className="photo-frame" onDoubleClick={handlePhotoDoubleClick}>
                 <div className="photo-placeholder">
                   <span className="photo-number">Photo {currentPhotoIndex + 1}/5</span>
                   <span className="photo-heart">❤️</span>
+                  <span className="double-click-hint">Double-click to open letter 💌</span>
                 </div>
               </div>
               <button className="gallery-nav next" onClick={nextPhoto}>❯</button>
